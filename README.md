@@ -1,6 +1,28 @@
 # Windows Installer & Repair Toolkit for Linux
 
-Toolkit otomatis untuk menginstal dan memperbaiki Windows pada SSD atau HDD sekunder langsung dari sistem Linux menggunakan QEMU/KVM, tanpa perlu membuat flashdisk bootable atau mengorbankan instalasi Linux utama.
+Toolkit otomatis untuk menginstal Windows pada SSD atau HDD sekunder langsung dari sistem Linux menggunakan QEMU/KVM, tanpa perlu membuat flashdisk bootable atau mengorbankan instalasi Linux utama.
+
+## Untuk Siapa Toolkit Ini?
+
+Toolkit ini dibuat untuk skenario spesifik:
+
+> _"Saya punya PC/Laptop yang menjalankan Linux, dan ingin menginstall Windows di SSD/HDD kosong — lalu memindahkan SSD/HDD tersebut ke komputer lain."_
+
+```
+┌─────────────┐    QEMU/KVM     ┌─────────────┐              ┌─────────────┐
+│  PC Linux   │ ──────────────► │  SSD Target  │ ──── cabut ──►│  PC Tujuan  │
+│  (Host)     │  Install Win11  │  (Windows)   │   & pasang   │  (Windows)  │
+└─────────────┘                 └─────────────┘              └─────────────┘
+```
+
+**Ini BUKAN:**
+- Pengganti Rufus / Ventoy (pembuat bootable USB)
+- Tool untuk dual-boot di satu disk
+- Tool untuk Windows atau macOS
+
+**Ini ADALAH:**
+- Tool Linux-only yang menggunakan QEMU/KVM sebagai "mesin virtual sementara" untuk menginstall Windows langsung ke disk fisik
+- SSD/HDD yang sudah diinstall bisa langsung dicabut dan dipakai di PC lain
 
 ---
 
